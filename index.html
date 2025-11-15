@@ -27,6 +27,16 @@ $(document).ready(function(e) {
   $('iframe').attr('src','https://www.inoreader.com/');
 });
 </script>
+<scrpit>
+$.post('get-iframe-src.php', function(data) {
+  $('iframe').attr('src',data);
+});
+</script>
+<script>
+$.post('get-iframe.php', function(data) {
+  $('#element_id').html(data);
+});
+</script>
 </head>
 <body>
 <style>
