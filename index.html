@@ -91,7 +91,7 @@ l.parentNode.insertBefore(s, l);
 <center><h2>Maç özetlerini izlemek için alttaki başlıklara tıklayın</h2></center>
 <table>
 <tr>
-<td><h4><a href="" target="iframe_a">Maç Özetleri</a>&nbsp;&nbsp;&nbsp;</h4></td>
+<td><h4><h4><a href="#">Maç Özetleri</a></h4>&nbsp;&nbsp;&nbsp;</h4></td>
 <td><h4><a href="https://www.inoreader.com/stream/user/1003579349/tag/%C5%9Eampiyonlar%20Ligi%20%C3%96zetleri/view/html?t=%C5%9Eampiyonlar%20Ligi&l=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fe%2Fec%2FSoccer_ball.svg%2F2048px-Soccer_ball.svg.png&cs=m&n=10" target="iframe_a">Şampiyonlar Ligi</a>&nbsp;&nbsp;&nbsp;</h4></td>
 <td><h4><a href="https://www.inoreader.com/stream/user/1003579349/tag/Avrupa%20Ligi%20Ma%C3%A7%20%C3%96zetleri/view/html?t=Avrupa%20Ligi&l=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fe%2Fec%2FSoccer_ball.svg%2F2048px-Soccer_ball.svg.png&cs=m&n=10" target="iframe_a">Avrupa Ligi</a>&nbsp;&nbsp;&nbsp;</h4></td>
 <td><h4><a href="https://www.inoreader.com/stream/user/1003579349/tag/Konferans%20Ligi%20%C3%96zetleri/view/html?t=Konferans%20Ligi&l=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fe%2Fec%2FSoccer_ball.svg%2F2048px-Soccer_ball.svg.png&cs=m&n=10" target="iframe_a">Konferans Ligi</a>&nbsp;&nbsp;&nbsp;</h4></td>
@@ -118,21 +118,17 @@ l.parentNode.insertBefore(s, l);
 </tr>
 </table>
 </center>
-  <div id="iframe-container">
-    <iframe id="iframe-link" width="720" height="2300" frameBorder="0"></iframe>
-  </div>
+<iframe name="iframe_a" width="720" height="2300" frameborder="0"></iframe>
 
-  <!-- Bağlantı, JavaScript ile iframe'e yükleme yapacak -->
-  <a href="#" id="load-iframe">
-    Iframe İçeriğini Görüntüle
-  </a>
-</center>
+<h4><a href="#" id="load-iframe" target="iframe_a">Maç Özetleri</a></h4>
 
 <script>
   document.getElementById("load-iframe").addEventListener("click", function(event) {
       event.preventDefault(); // Linkin varsayılan davranışını engelle
       var iframeURL = "https://www.inoreader.com/stream/user/1003579349/tag/Ma%C3%A7%20%C3%96zetleri/view/html?t=Ma%C3%A7%20%C3%96zetleri&l=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fe%2Fec%2FSoccer_ball.svg%2F2048px-Soccer_ball.svg.png&cs=m&n=10";
-      document.getElementById("iframe-link").src = iframeURL; // iframe'e URL'yi ata
+      
+      // iframe'e URL'yi atama
+      document.getElementById("iframe_a").src = iframeURL;
   });
 </script>
 <center>
