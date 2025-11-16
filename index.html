@@ -119,18 +119,30 @@ l.parentNode.insertBefore(s, l);
 </table>
 </center>
 <center>
-    <div id="iframe-container"></div>
+  <div id="iframe-container"></div>
 </center>
-    <script>
-        window.onload = function() {
-            var iframe = document.createElement("iframe");
-            iframe.src = "https://www.inoreader.com/stream/user/1003579349/tag/Ma%C3%A7%20%C3%96zetleri/view/html?t=Ma%C3%A7%20%C3%96zetleri&l=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fe%2Fec%2FSoccer_ball.svg%2F2048px-Soccer_ball.svg.png&cs=m&n=10";
-            iframe.width = "720";
-            iframe.height = "2300";
-            iframe.frameBorder = "0";
-            document.getElementById("iframe-container").appendChild(iframe);
-        };
-    </script>
+
+<!-- iframe kaynağını saklamak için görünmeyen bir <a> etiketi -->
+<a id="iframe-link" href="https://www.inoreader.com/stream/user/1003579349/tag/Ma%C3%A7%20%C3%96zetleri/view/html?t=Ma%C3%A7%20%C3%96zetleri&l=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fe%2Fec%2FSoccer_ball.svg%2F2048px-Soccer_ball.svg.png&cs=m&n=10" style="display:none;">
+  Gizli Link
+</a>
+
+<script>
+  window.onload = function() {
+      // <a> etiketindeki href değerini alıyoruz
+      var iframeURL = document.getElementById("iframe-link").href;
+
+      // iframe oluştur
+      var iframe = document.createElement("iframe");
+      iframe.src = iframeURL;
+      iframe.width = "720";
+      iframe.height = "2300";
+      iframe.frameBorder = "0";
+
+      // iframe'i sayfaya ekle
+      document.getElementById("iframe-container").appendChild(iframe);
+  };
+</script>
 <center>
 <script>
 (function(cbwe){
